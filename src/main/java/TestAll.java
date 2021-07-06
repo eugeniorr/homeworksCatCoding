@@ -39,5 +39,10 @@ public class TestAll {
         int count = Collections.frequency(listInt, 5);
         System.out.println(listInt + ", size: " + listInt.size() + ", count of 5: " + count);
 
+        List<Integer> newList = new LinkedList<>();
+        newList.add(1);
+        newList.add(2);
+        newList.add(3);
+
     }
 }
