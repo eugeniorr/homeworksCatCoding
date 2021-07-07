@@ -9,6 +9,7 @@ public class MyLinkedList<E> extends AbstractSequentialList<E> implements List<E
     transient int size = 0;
     transient MyNode<E> first;
     transient MyNode<E> last;
+    private static final long serialVersionUID = 876323262645176354L;
 
     public MyLinkedList() {
     }
@@ -561,9 +562,6 @@ public class MyLinkedList<E> extends AbstractSequentialList<E> implements List<E
 
         return a;
     }
-
-    private static final long serialVersionUID = 876323262645176354L;
-
 
     private void writeObject(java.io.ObjectOutputStream s)
             throws java.io.IOException {

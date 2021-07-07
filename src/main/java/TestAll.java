@@ -10,7 +10,7 @@ public class TestAll {
 
         int[] b = new int[5];
 
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         list.add("3");
         list.add("man222");
         list.add("man23");
@@ -38,11 +38,5 @@ public class TestAll {
         listInt.add(5);
         int count = Collections.frequency(listInt, 5);
         System.out.println(listInt + ", size: " + listInt.size() + ", count of 5: " + count);
-
-        List<Integer> newList = new LinkedList<>();
-        newList.add(1);
-        newList.add(2);
-        newList.add(3);
-
     }
 }

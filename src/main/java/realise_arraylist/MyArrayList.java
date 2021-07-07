@@ -86,7 +86,7 @@ public class MyArrayList<E> extends AbstractList<E> implements List<E>, RandomAc
             v.modCount = 0;
             return v;
         } catch (CloneNotSupportedException e) {
-            throw new InternalError(e);
+            throw new RuntimeException(e);
         }
     }
 
