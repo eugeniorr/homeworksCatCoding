@@ -135,19 +135,11 @@ public class MyArrayList<E> extends AbstractList<E> implements List<E>, RandomAc
 
     @Override
     public boolean remove(Object o) {
-        if (o == null) {
-            for (int index = 0; index < size; index++)
-                if (elementData[index] == null) {
-                    fastRemove(index);
-                    return true;
-                }
-        } else {
-            for (int index = 0; index < size; index++)
-                if (o.equals(elementData[index])) {
-                    fastRemove(index);
-                    return true;
-                }
-        }
+        for (int index = 0; index < size; index++)
+            if ((o == null && elementData[index] == null) || (o != null && o.equals(elementData[index]))) {
+                fastRemove(index);
+                return true;
+            }
         return false;
     }
 
@@ -297,15 +289,9 @@ public class MyArrayList<E> extends AbstractList<E> implements List<E>, RandomAc
 
     @Override
     public int lastIndexOf(Object o) {
-        if (o == null) {
-            for (int i = size - 1; i >= 0; i--)
-                if (elementData[i] == null)
-                    return i;
-        } else {
-            for (int i = size - 1; i >= 0; i--)
-                if (o.equals(elementData[i]))
-                    return i;
-        }
+        for (int i = size - 1; i >= 0; i--)
+            if ((o == null && elementData[i] == null) || (o != null && o.equals(elementData[i])))
+                return i;
         return -1;
     }
 }

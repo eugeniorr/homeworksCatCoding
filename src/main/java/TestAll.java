@@ -1,16 +1,24 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class TestAll {
     public static void main(String[] args) {
 
-        System.out.println(88 >> 3);
+        System.out.println(88 >> 2);
 
-        Map<Integer, String> map = new HashMap<>();
-        map.put(13, "Apples");
-        map.put(99, "Bananas");
-        map.put(12, "Pomegranate");
-        System.out.println(map);
+        Set<String> set = new HashSet<>();
+        set.add("Apples");
+        set.add("Bananas");
+        set.add("Pomegranate");
+        System.out.println(set);
+
+//        Map<Integer, String> map = new HashMap<>();
+//        map.put(13, "Apples");
+//        map.put(99, "Bananas");
+//        map.put(12, "Pomegranate");
+//        System.out.println(map);
 //        int[] b = new int[5];
 //
 //        List<String> list = new ArrayList<>();
